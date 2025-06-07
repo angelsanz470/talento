@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talento Pinolero - Muestra tu Talento</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+    <img src="../Logo de la pagina-01 (1).png" alt="Talento Pinolero" class="logo-img">
+</div>
+            <nav class="nav">
+                <a href="#inicio" class="nav-link">Inicio</a>
+                <a href="descripcion.html" class="nav-link">Descripción</a>
+                <a href="talentos.html" class="nav-link">Talentos</a>
+                <a href="agregar-talento.html" class="nav-link">Agregar Talento</a>
+                <a href="ayuda.html" class="nav-link">Ayuda</a>
+                <a href="asesoramiento.html" class="nav-link">Asesoramiento</a>
+                <a href="noticias.html" class="nav-link">Noticias</a>
+                <a href="convocatorias.html" class="nav-link">Convocatorias</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h2>Descubre y Comparte el Talento Nicaragüense</h2>
+            <p>Una plataforma donde los nicaragüenses pueden mostrar sus habilidades, cursos, títulos y experiencias</p>
+            <div class="hero-buttons">
+                <a href="agregar-talento.html" class="btn-primary">
+                    <i class="fas fa-plus"></i> Agregar mi Talento
+                </a>
+                <a href="ayuda.html" class="btn-secondary">
+                    <i class="fas fa-question-circle"></i> Ayuda
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filtros -->
+    <section class="filters">
+        <div class="container">
+            <h3>Filtrar por categoría:</h3>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="todos">Todos</button>
+                <button class="filter-btn" data-filter="musica">Música</button>
+                <button class="filter-btn" data-filter="arte">Arte</button>
+                <button class="filter-btn" data-filter="tecnologia">Tecnología</button>
+                <button class="filter-btn" data-filter="educacion">Educación</button>
+                <button class="filter-btn" data-filter="deportes">Deportes</button>
+                <button class="filter-btn" data-filter="cocina">Cocina</button>
+                <button class="filter-btn" data-filter="artesania">Artesanía</button>
+                <button class="filter-btn" data-filter="danza">Danza</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Talentos Grid -->
+    <section id="talentos" class="talentos-section">
+        <div class="container">
+            <h2>Nuestros Talentos</h2>
+            <div id="talentos-grid" class="talentos-grid">
+                <!-- Los talentos se cargarán dinámicamente con JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Nuevos Talentos Destacados -->
+    <section class="new-talents-section">
+        <div class="container">
+            <div class="new-talents-grid">
+                <div class="new-talent-card">
+                    <div class="new-talent-avatar">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="Miguel Ángel">
+                    </div>
+                    <div class="new-talent-info">
+                        <h4>Miguel Ángel Herrera</h4>
+                        <p>Arquitecto y Diseñador</p>
+                        <div class="new-talent-location">📍 Managua</div>
+                        <div class="new-talent-rate">$45/hora</div>
+                        <div class="new-talent-skills">
+                            <span>AutoCAD</span>
+                            <span>3D Modeling</span>
+                            <span>Diseño Sostenible</span>
+                        </div>
+                        <button class="btn-contact-new">
+                            <i class="fas fa-envelope"></i> Contactar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="new-talent-card">
+                    <div class="new-talent-avatar">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=face" alt="Isabella">
+                    </div>
+                    <div class="new-talent-info">
+                        <h4>Isabella Martínez</h4>
+                        <p>Psicóloga Clínica</p>
+                        <div class="new-talent-location">📍 León</div>
+                        <div class="new-talent-rate">$35/hora</div>
+                        <div class="new-talent-skills">
+                            <span>Terapia Familiar</span>
+                            <span>Psicología Infantil</span>
+                            <span>Mindfulness</span>
+                        </div>
+                        <button class="btn-contact-new">
+                            <i class="fas fa-envelope"></i> Contactar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="new-talent-card">
+                    <div class="new-talent-avatar">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=face" alt="Rodrigo">
+                    </div>
+                    <div class="new-talent-info">
+                        <h4>Rodrigo Sánchez</h4>
+                        <p>Marketing Digital</p>
+                        <div class="new-talent-location">📍 Granada</div>
+                        <div class="new-talent-rate">$30/hora</div>
+                        <div class="new-talent-skills">
+                            <span>SEO</span>
+                            <span>Social Media</span>
+                            <span>Google Ads</span>
+                        </div>
+                        <button class="btn-contact-new">
+                            <i class="fas fa-envelope"></i> Contactar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Talentos Destacados -->
+<section class="featured-talents-section">
+    <div class="container">
+        <h2>Talentos Destacados</h2>
+        <div class="featured-talents-grid">
+            <div class="new-talent-card">
+                <div class="new-talent-avatar">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=face" alt="María Elena">
+                </div>
+                <div class="new-talent-info">
+                    <h4>María Elena Gutiérrez</h4>
+                    <p>Cantante y Compositora</p>
+                    <div class="new-talent-location">📍 Managua</div>
+                    <div class="new-talent-rate">$25/hora</div>
+                    <div class="new-talent-skills">
+                        <span>Canto</span>
+                        <span>Composición</span>
+                        <span>Guitarra</span>
+                        <span>Piano</span>
+                    </div>
+                    <button class="btn-contact-new">
+                        <i class="fas fa-envelope"></i> Contactar
+                    </button>
+                </div>
+            </div>
+            
+            <div class="new-talent-card">
+                <div class="new-talent-avatar">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="Carlos Alberto">
+                </div>
+                <div class="new-talent-info">
+                    <h4>Carlos Alberto Mendoza</h4>
+                    <p>Pintor y Muralista</p>
+                    <div class="new-talent-location">📍 León</div>
+                    <div class="new-talent-rate">$30/hora</div>
+                    <div class="new-talent-skills">
+                        <span>Pintura al óleo</span>
+                        <span>Muralismo</span>
+                        <span>Arte digital</span>
+                        <span>Diseño</span>
+                    </div>
+                    <button class="btn-contact-new">
+                        <i class="fas fa-envelope"></i> Contactar
+                    </button>
+                </div>
+            </div>
+            
+            <div class="new-talent-card">
+                <div class="new-talent-avatar">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" alt="Ana Sofía">
+                </div>
+                <div class="new-talent-info">
+                    <h4>Ana Sofía Morales</h4>
+                    <p>Desarrolladora Full Stack</p>
+                    <div class="new-talent-location">📍 Granada</div>
+                    <div class="new-talent-rate">$35/hora</div>
+                    <div class="new-talent-skills">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                        <span>AWS</span>
+                        <span>UI/UX</span>
+                    </div>
+                    <button class="btn-contact-new">
+                        <i class="fas fa-envelope"></i> Contactar
+                    </button>
+                </div>
+            </div>
+            
+            <div class="new-talent-card">
+                <div class="new-talent-avatar">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="Roberto José">
+                </div>
+                <div class="new-talent-info">
+                    <h4>Roberto José Hernández</h4>
+                    <p>Profesor de Matemáticas</p>
+                    <div class="new-talent-location">📍 Masaya</div>
+                    <div class="new-talent-rate">$20/hora</div>
+                    <div class="new-talent-skills">
+                        <span>Matemáticas</span>
+                        <span>Pedagogía</span>
+                        <span>Educación virtual</span>
+                        <span>Tutoría</span>
+                    </div>
+                    <button class="btn-contact-new">
+                        <i class="fas fa-envelope"></i> Contactar
+                    </button>
+                </div>
+            </div>
+            
+            <div class="new-talent-card">
+                <div class="new-talent-avatar">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=face" alt="Luis Fernando">
+                </div>
+                <div class="new-talent-info">
+                    <h4>Luis Fernando Castillo</h4>
+                    <p>Chef Especializado</p>
+                    <div class="new-talent-location">📍 Matagalpa</div>
+                    <div class="new-talent-rate">$40/hora</div>
+                    <div class="new-talent-skills">
+                        <span>Cocina tradicional</span>
+                        <span>Repostería</span>
+                        <span>Gestión de restaurantes</span>
+                        <span>Catering</span>
+                    </div>
+                    <button class="btn-contact-new">
+                        <i class="fas fa-envelope"></i> Contactar
+                    </button>
+                </div>
+            </div>
+            
+            <div class="new-talent-card">
+                <div class="new-talent-avatar">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face" alt="Gabriela Patricia">
+                </div>
+                <div class="new-talent-info">
+                    <h4>Gabriela Patricia Vega</h4>
+                    <p>Entrenadora Personal</p>
+                    <div class="new-talent-location">📍 Chinandega</div>
+                    <div class="new-talent-rate">$22/hora</div>
+                    <div class="new-talent-skills">
+                        <span>Entrenamiento personal</span>
+                        <span>Nutrición</span>
+                        <span>Fitness</span>
+                        <span>Atletismo</span>
+                    </div>
+                    <button class="btn-contact-new">
+                        <i class="fas fa-envelope"></i> Contactar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Sección de Estadísticas -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number">12+</div>
+                    <div class="stat-label">Talentos Registrados</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">Categorías</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">Clientes Satisfechos</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Proyectos Completados</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Testimonios -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2>Lo que dicen nuestros clientes</h2>
+            <div class="carousel-container">
+                <button class="carousel-btn carousel-prev-testimonios">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="carousel-wrapper">
+                    <div class="carousel-testimonios">
+                        <div class="testimonial-card">
+                            <div class="testimonial-quote">
+                                "Encontré un excelente desarrollador web a través de Talento Pinolero. El proceso fue rápido y el trabajo entregado superó mis expectativas. Definitivamente volveré a usar esta plataforma."
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop&crop=face" alt="Cliente">
+                                </div>
+                                <div class="testimonial-info">
+                                    <h4>Carlos Ramírez</h4>
+                                    <p>Dueño de Negocio, Managua</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-card">
+                            <div class="testimonial-quote">
+                                "Como artista, encontrar oportunidades de trabajo puede ser difícil. Gracias a Talento Pinolero he podido conectar con clientes que valoran mi trabajo y pagan justamente."
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">
+                                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=50&h=50&fit=crop&crop=face" alt="María Fernanda López">
+                                </div>
+                                <div class="testimonial-info">
+                                    <h4>María Fernanda López</h4>
+                                    <p>Artista Visual, León</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-card">
+                            <div class="testimonial-quote">
+                                "La calidad de los profesionales en esta plataforma es excepcional. Contraté a un chef para un evento especial y todos mis invitados quedaron encantados con la comida."
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">
+                                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=50&h=50&fit=crop&crop=face" alt="Cliente">
+                                </div>
+                                <div class="testimonial-info">
+                                    <h4>Roberto Mendoza</h4>
+                                    <p>Organizador de Eventos, Granada</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-card">
+                            <div class="testimonial-quote">
+                                "Excelente plataforma para encontrar talento local. Contraté a una entrenadora personal y los resultados han sido increíbles. Muy profesional y dedicada."
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">
+                                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=50&h=50&fit=crop&crop=face" alt="Cliente">
+                                </div>
+                                <div class="testimonial-info">
+                                    <h4>Ana Patricia Solís</h4>
+                                    <p>Ejecutiva, Masaya</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-card">
+                            <div class="testimonial-quote">
+                                "Como músico, esta plataforma me ha abierto muchas puertas. He conseguido varios trabajos para eventos y bodas. Los clientes son serios y pagan bien."
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">
+                                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=50&h=50&fit=crop&crop=face" alt="Cliente">
+                                </div>
+                                <div class="testimonial-info">
+                                    <h4>José Manuel Rivera</h4>
+                                    <p>Músico, Jinotega</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-card">
+                            <div class="testimonial-quote">
+                                "Increíble la variedad de talentos disponibles. Encontré exactamente lo que necesitaba para mi proyecto de diseño. Muy recomendado para cualquier empresa."
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">
+                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=50&h=50&fit=crop&crop=face" alt="Cliente">
+                                </div>
+                                <div class="testimonial-info">
+                                    <h4>Lucía Martínez</h4>
+                                    <p>Directora Creativa, Chinandega</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn carousel-next-testimonios">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para ver detalles -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Talento Pinolero. Orgullosamente nicaragüense 🇳🇮</p>
+            <div class="footer-links">
+                <a href="descripcion.html">Descripción</a>
+                <a href="ayuda.html">Ayuda</a>
+                <a href="mailto:talentopinolero@gmail.com">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

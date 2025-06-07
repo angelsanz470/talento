@@ -1,0 +1,248 @@
+/* Estilos para los filtros de convocatorias */
+.convocatorias-filters {
+  background: #f6e9ca;
+  padding: 2rem 0;
+  border-bottom: 3px solid #c69a72;
+}
+
+.filters-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.filter-dropdown-btn {
+  background: linear-gradient(45deg, #155446, #13312a);
+  color: #f6e9ca;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  min-width: 140px;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgba(19, 49, 42, 0.2);
+}
+
+.filter-dropdown-btn:hover {
+  background: linear-gradient(45deg, #c69a72, #155446);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(19, 49, 42, 0.3);
+}
+
+.filter-dropdown-btn.active-filter {
+  background: linear-gradient(45deg, #c69a72, #155446);
+  border: 2px solid #f6e9ca;
+  animation: pulse 0.3s ease-out;
+}
+
+.filter-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6e9ca;
+  min-width: 200px;
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: 0 8px 25px rgba(19, 49, 42, 0.3);
+  z-index: 1000;
+  border-radius: 10px;
+  border: 2px solid #c69a72;
+  top: 100%;
+  left: 0;
+  margin-top: 5px;
+}
+
+.filter-dropdown-content.show {
+  display: block;
+  animation: slideDown 0.3s ease-out;
+}
+
+.filter-dropdown-content a {
+  color: #13312a;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(198, 154, 114, 0.2);
+}
+
+.filter-dropdown-content a:last-child {
+  border-bottom: none;
+}
+
+.filter-dropdown-content a:hover {
+  background-color: #155446;
+  color: #f6e9ca;
+  transform: translateX(5px);
+}
+
+.filter-dropdown-content a i {
+  color: #c69a72;
+  width: 16px;
+  text-align: center;
+}
+
+.filter-dropdown-content a:hover i {
+  color: #f6e9ca;
+}
+
+.clear-filters-btn {
+  background: #c69a72;
+  color: #13312a;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 10px rgba(198, 154, 114, 0.3);
+}
+
+.clear-filters-btn:hover {
+  background: #155446;
+  color: #f6e9ca;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(198, 154, 114, 0.4);
+}
+
+/* Animaciones */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Scrollbar personalizado para dropdowns */
+.filter-dropdown-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.filter-dropdown-content::-webkit-scrollbar-track {
+  background: #f6e9ca;
+  border-radius: 3px;
+}
+
+.filter-dropdown-content::-webkit-scrollbar-thumb {
+  background: #c69a72;
+  border-radius: 3px;
+}
+
+.filter-dropdown-content::-webkit-scrollbar-thumb:hover {
+  background: #155446;
+}
+
+/* Responsive para filtros */
+@media (max-width: 768px) {
+  .filters-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-dropdown {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .filter-dropdown-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .filter-dropdown-content {
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+
+  .clear-filters-btn {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+}
+
+/* Estilos para mensaje de no resultados */
+.no-results-message {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem;
+  color: #155446;
+  font-size: 1.2rem;
+  background: white;
+  border-radius: 15px;
+  border: 2px solid #c69a72;
+  box-shadow: 0 5px 20px rgba(19, 49, 42, 0.1);
+}
+
+.no-results-message h3 {
+  color: #13312a;
+  margin: 1rem 0;
+}
+
+.no-results-message p {
+  color: #155446;
+  margin-bottom: 1rem;
+}
+
+/* Indicador de filtros activos */
+.active-filters-indicator {
+  background: linear-gradient(45deg, #c69a72, #155446);
+  color: #f6e9ca;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-left: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  animation: fadeInUp 0.3s ease-out;
+}
+
+/* Efecto hover mejorado para las tarjetas de convocatorias */
+.help-card[data-categoria]:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(19, 49, 42, 0.2);
+  border-color: #155446;
+}
+
+/* Transiciones suaves para el filtrado */
+.help-card[data-categoria] {
+  transition: all 0.3s ease;
+}

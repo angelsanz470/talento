@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convocatorias - Talento Pinolero</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/filters-style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="../Logo de la pagina-01 (1).png" alt="Talento Pinolero" class="logo-img">
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="descripcion.html" class="nav-link">Descripción</a>
+                <a href="talentos.html" class="nav-link">Talentos</a>
+                <a href="agregar-talento.html" class="nav-link">Agregar Talento</a>
+                <a href="ayuda.html" class="nav-link">Ayuda</a>
+                <a href="asesoramiento.html" class="nav-link">Asesoramiento</a>
+                <a href="noticias.html" class="nav-link">Noticias</a>
+                <a href="convocatorias.html" class="nav-link active">Convocatorias</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-small">
+        <div class="hero-content">
+            <h2><i class="fas fa-briefcase"></i> Convocatorias de Empleo</h2>
+            <p>Oportunidades laborales para talentos nicaragüenses</p>
+        </div>
+    </section>
+
+    <!-- Filtros de Convocatorias -->
+    <section class="convocatorias-filters" style="background: #f6e9ca; padding: 2rem 0; border-bottom: 3px solid #c69a72;">
+        <div class="container">
+            <h3 style="text-align: center; margin-bottom: 2rem; color: #13312a;">
+                <i class="fas fa-filter"></i> Filtrar Convocatorias
+            </h3>
+            <div class="filters-row" style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; align-items: center;">
+                
+                <!-- Filtro de Categorías -->
+                <div class="filter-dropdown">
+                    <button class="filter-dropdown-btn" onclick="toggleDropdown('categorias')">
+                        <i class="fas fa-tags"></i> Categorías
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="filter-dropdown-content" id="categorias">
+                        <a href="#" data-filter="musica"><i class="fas fa-music"></i> Música</a>
+                        <a href="#" data-filter="arte"><i class="fas fa-palette"></i> Arte</a>
+                        <a href="#" data-filter="tecnologia"><i class="fas fa-laptop-code"></i> Tecnología</a>
+                        <a href="#" data-filter="educacion"><i class="fas fa-chalkboard-teacher"></i> Educación</a>
+                        <a href="#" data-filter="deportes"><i class="fas fa-running"></i> Deportes</a>
+                        <a href="#" data-filter="cocina"><i class="fas fa-utensils"></i> Cocina</a>
+                        <a href="#" data-filter="artesania"><i class="fas fa-hammer"></i> Artesanía</a>
+                        <a href="#" data-filter="danza"><i class="fas fa-theater-masks"></i> Danza</a>
+                    </div>
+                </div>
+
+                <!-- Filtro de Mes -->
+                <div class="filter-dropdown">
+                    <button class="filter-dropdown-btn" onclick="toggleDropdown('meses')">
+                        <i class="fas fa-calendar"></i> Mes
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="filter-dropdown-content" id="meses">
+                        <a href="#" data-filter="enero">Enero</a>
+                        <a href="#" data-filter="febrero">Febrero</a>
+                        <a href="#" data-filter="marzo">Marzo</a>
+                        <a href="#" data-filter="abril">Abril</a>
+                        <a href="#" data-filter="mayo">Mayo</a>
+                        <a href="#" data-filter="junio">Junio</a>
+                        <a href="#" data-filter="julio">Julio</a>
+                        <a href="#" data-filter="agosto">Agosto</a>
+                        <a href="#" data-filter="septiembre">Septiembre</a>
+                        <a href="#" data-filter="octubre">Octubre</a>
+                        <a href="#" data-filter="noviembre">Noviembre</a>
+                        <a href="#" data-filter="diciembre">Diciembre</a>
+                    </div>
+                </div>
+
+                <!-- Filtro de Ciudad -->
+                <div class="filter-dropdown">
+                    <button class="filter-dropdown-btn" onclick="toggleDropdown('ciudades')">
+                        <i class="fas fa-map-marker-alt"></i> Ciudad
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="filter-dropdown-content" id="ciudades">
+                        <a href="#" data-filter="managua">Managua</a>
+                        <a href="#" data-filter="leon">León</a>
+                        <a href="#" data-filter="granada">Granada</a>
+                        <a href="#" data-filter="masaya">Masaya</a>
+                        <a href="#" data-filter="chinandega">Chinandega</a>
+                        <a href="#" data-filter="matagalpa">Matagalpa</a>
+                        <a href="#" data-filter="esteli">Estelí</a>
+                        <a href="#" data-filter="jinotega">Jinotega</a>
+                        <a href="#" data-filter="nueva-segovia">Nueva Segovia</a>
+                        <a href="#" data-filter="madriz">Madriz</a>
+                        <a href="#" data-filter="boaco">Boaco</a>
+                        <a href="#" data-filter="chontales">Chontales</a>
+                        <a href="#" data-filter="rio-san-juan">Río San Juan</a>
+                        <a href="#" data-filter="rivas">Rivas</a>
+                        <a href="#" data-filter="carazo">Carazo</a>
+                    </div>
+                </div>
+
+                <!-- Filtro de Municipio -->
+                <div class="filter-dropdown">
+                    <button class="filter-dropdown-btn" onclick="toggleDropdown('municipios')">
+                        <i class="fas fa-building"></i> Municipio
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="filter-dropdown-content" id="municipios">
+                        <a href="#" data-filter="managua-centro">Managua Centro</a>
+                        <a href="#" data-filter="ciudad-sandino">Ciudad Sandino</a>
+                        <a href="#" data-filter="tipitapa">Tipitapa</a>
+                        <a href="#" data-filter="leon-centro">León Centro</a>
+                        <a href="#" data-filter="chinandega-centro">Chinandega Centro</a>
+                        <a href="#" data-filter="corinto">Corinto</a>
+                        <a href="#" data-filter="granada-centro">Granada Centro</a>
+                        <a href="#" data-filter="masaya-centro">Masaya Centro</a>
+                        <a href="#" data-filter="masatepe">Masatepe</a>
+                        <a href="#" data-filter="matagalpa-centro">Matagalpa Centro</a>
+                        <a href="#" data-filter="jinotega-centro">Jinotega Centro</a>
+                        <a href="#" data-filter="esteli-centro">Estelí Centro</a>
+                        <a href="#" data-filter="ocotal">Ocotal</a>
+                        <a href="#" data-filter="somoto">Somoto</a>
+                        <a href="#" data-filter="boaco-centro">Boaco Centro</a>
+                        <a href="#" data-filter="juigalpa">Juigalpa</a>
+                        <a href="#" data-filter="rivas-centro">Rivas Centro</a>
+                        <a href="#" data-filter="san-carlos">San Carlos</a>
+                    </div>
+                </div>
+
+                <!-- Botón para limpiar filtros -->
+                <button class="clear-filters-btn" onclick="clearAllFilters()">
+                    <i class="fas fa-times"></i> Limpiar Filtros
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Convocatorias Activas -->
+    <section class="help-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 3rem; color: #13312a;">Convocatorias Activas</h2>
+            <div class="help-grid">
+            <!-- Convocatoria 1 -->
+            <div class="help-card" style="position: relative; overflow: hidden;" data-categoria="tecnologia" data-mes="marzo" data-ciudad="managua" data-municipio="managua-centro">
+                <!-- Imagen de fondo -->
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3') center/cover; opacity: 0.15; z-index: 0;"></div>
+                
+                <div style="position: relative; z-index: 1;">
+                    <div class="help-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Desarrollador Full Stack - TechNica Solutions</h3>
+                    <p style="color: #155446; font-weight: 600; margin-top: -0.5rem; margin-bottom: 1rem;">
+                        <i class="fas fa-building" style="margin-right: 5px;"></i> Organizado por: TechNica Solutions Inc.
+                    </p>
+                    <div style="margin-bottom: 1rem;">
+                        <p><strong><i class="fas fa-building"></i> Empresa:</strong> TechNica Solutions</p>
+                        <p><strong><i class="fas fa-map-marker-alt"></i> Ubicación:</strong> Managua (Modalidad Híbrida)</p>
+                        <p><strong><i class="fas fa-money-bill-wave"></i> Salario:</strong> $800 - $1,200 USD</p>
+                        <p><strong><i class="fas fa-calendar-times"></i> Fecha Límite:</strong> 10 de Marzo, 2025</p>
+                    </div>
+                    <p><strong>Requisitos:</strong></p>
+                    <ul style="margin-bottom: 1rem;">
+                        <li>3+ años de experiencia en desarrollo web</li>
+                        <li>Dominio de React, Node.js, MongoDB</li>
+                        <li>Experiencia con AWS o servicios cloud</li>
+                        <li>Inglés intermedio-avanzado</li>
+                    </ul>
+                    <div style="margin-top: 1rem; padding: 10px; background: #f6e9ca; border-radius: 8px; border-left: 4px solid #155446;">
+                        <strong>Beneficios:</strong> Seguro médico, bonos por rendimiento, capacitación continua, trabajo remoto flexible.
+                    </div>
+                    <button class="btn-primary" style="margin-top: 1rem; width: 100%;">
+                        <i class="fas fa-paper-plane"></i> Aplicar Ahora
+                    </button>
+                </div>
+            </div>
+
+            <!-- Convocatoria 2 -->
+            <div class="help-card" style="position: relative; overflow: hidden;" data-categoria="cocina" data-mes="marzo" data-ciudad="granada" data-municipio="granada-centro">
+                <!-- Imagen de fondo -->
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3') center/cover; opacity: 0.15; z-index: 0;"></div>
+                
+                <div style="position: relative; z-index: 1;">
+                    <div class="help-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Chef Ejecutivo - Hotel Colonial Granada</h3>
+                    <p style="color: #155446; font-weight: 600; margin-top: -0.5rem; margin-bottom: 1rem;">
+                        <i class="fas fa-building" style="margin-right: 5px;"></i> Organizado por: Grupo Hotelero Colonial
+                    </p>
+                    <div style="margin-bottom: 1rem;">
+                        <p><strong><i class="fas fa-building"></i> Empresa:</strong> Hotel Colonial Granada</p>
+                        <p><strong><i class="fas fa-map-marker-alt"></i> Ubicación:</strong> Granada, Nicaragua</p>
+                        <p><strong><i class="fas fa-money-bill-wave"></i> Salario:</strong> $600 - $900 USD</p>
+                        <p><strong><i class="fas fa-calendar-times"></i> Fecha Límite:</strong> 15 de Marzo, 2025</p>
+                    </div>
+                    <p><strong>Requisitos:</strong></p>
+                    <ul style="margin-bottom: 1rem;">
+                        <li>5+ años de experiencia en cocina profesional</li>
+                        <li>Especialización en cocina internacional y local</li>
+                        <li>Experiencia en gestión de equipos</li>
+                        <li>Certificaciones en seguridad alimentaria</li>
+                    </ul>
+                    <div style="margin-top: 1rem; padding: 10px; background: #f6e9ca; border-radius: 8px; border-left: 4px solid #155446;">
+                        <strong>Beneficios:</strong> Alojamiento incluido, seguro médico, vacaciones pagadas, oportunidad de crecimiento.
+                    </div>
+                    <button class="btn-primary" style="margin-top: 1rem; width: 100%;">
+                        <i class="fas fa-paper-plane"></i> Aplicar Ahora
+                    </button>
+                </div>
+            </div>
+
+            <!-- Convocatoria 3 -->
+            <div class="help-card" style="position: relative; overflow: hidden;" data-categoria="arte" data-mes="marzo" data-ciudad="leon" data-municipio="leon-centro">
+                <!-- Imagen de fondo -->
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3') center/cover; opacity: 0.15; z-index: 0;"></div>
+                
+                <div style="position: relative; z-index: 1;">
+                    <div class="help-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Diseñador Gráfico Senior - Agencia Creativa León</h3>
+                    <p style="color: #155446; font-weight: 600; margin-top: -0.5rem; margin-bottom: 1rem;">
+                        <i class="fas fa-building" style="margin-right: 5px;"></i> Organizado por: Creativa León S.A.
+                    </p>
+                    <div style="margin-bottom: 1rem;">
+                        <p><strong><i class="fas fa-building"></i> Empresa:</strong> Agencia Creativa León</p>
+                        <p><strong><i class="fas fa-map-marker-alt"></i> Ubicación:</strong> León, Nicaragua</p>
+                        <p><strong><i class="fas fa-money-bill-wave"></i> Salario:</strong> $500 - $750 USD</p>
+                        <p><strong><i class="fas fa-calendar-times"></i> Fecha Límite:</strong> 20 de Marzo, 2025</p>
+                    </div>
+                    <p><strong>Requisitos:</strong></p>
+                    <ul style="margin-bottom: 1rem;">
+                        <li>Licenciatura en Diseño Gráfico o afín</li>
+                        <li>Dominio de Adobe Creative Suite</li>
+                        <li>Portfolio sólido con proyectos variados</li>
+                        <li>Experiencia en branding y marketing digital</li>
+                    </ul>
+                    <div style="margin-top: 1rem; padding: 10px; background: #f6e9ca; border-radius: 8px; border-left: 4px solid #155446;">
+                        <strong>Beneficios:</strong> Ambiente creativo, proyectos internacionales, capacitación en nuevas tecnologías.
+                    </div>
+                    <button class="btn-primary" style="margin-top: 1rem; width: 100%;">
+                        <i class="fas fa-paper-plane"></i> Aplicar Ahora
+                    </button>
+                </div>
+            </div>
+
+            <!-- Convocatoria 4 -->
+            <div class="help-card" style="position: relative; overflow: hidden;" data-categoria="educacion" data-mes="marzo" data-ciudad="masaya" data-municipio="masaya-centro">
+                <!-- Imagen de fondo -->
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3') center/cover; opacity: 0.15; z-index: 0;"></div>
+                
+                <div style="position: relative; z-index: 1;">
+                    <div class="help-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Profesor de Matemáticas - Colegio Bilingüe Masaya</h3>
+                    <p style="color: #155446; font-weight: 600; margin-top: -0.5rem; margin-bottom: 1rem;">
+                        <i class="fas fa-building" style="margin-right: 5px;"></i> Organizado por: Fundación Educativa Internacional
+                    </p>
+                    <div style="margin-bottom: 1rem;">
+                        <p><strong><i class="fas fa-building"></i> Empresa:</strong> Colegio Bilingüe Internacional</p>
+                        <p><strong><i class="fas fa-map-marker-alt"></i> Ubicación:</strong> Masaya, Nicaragua</p>
+                        <p><strong><i class="fas fa-money-bill-wave"></i> Salario:</strong> $400 - $600 USD</p>
+                        <p><strong><i class="fas fa-calendar-times"></i> Fecha Límite:</strong> 25 de Marzo, 2025</p>
+                    </div>
+                    <p><strong>Requisitos:</strong></p>
+                    <ul style="margin-bottom: 1rem;">
+                        <li>Licenciatura en Matemáticas o Educación</li>
+                        <li>Experiencia mínima de 3 años enseñando</li>
+                        <li>Inglés conversacional</li>
+                        <li>Conocimiento en tecnología educativa</li>
+                    </ul>
+                    <div style="margin-top: 1rem; padding: 10px; background: #f6e9ca; border-radius: 8px; border-left: 4px solid #155446;">
+                        <strong>Beneficios:</strong> Estabilidad laboral, capacitación continua, ambiente educativo de calidad.
+                    </div>
+                    <button class="btn-primary" style="margin-top: 1rem; width: 100%;">
+                        <i class="fas fa-paper-plane"></i> Aplicar Ahora
+                    </button>
+                </div>
+            </div>
+
+            <!-- Convocatoria 5 -->
+            <div class="help-card" style="position: relative; overflow: hidden;" data-categoria="arte" data-mes="abril" data-ciudad="managua" data-municipio="managua-centro">
+                <!-- Imagen de fondo -->
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3') center/cover; opacity: 0.15; z-index: 0;"></div>
+                
+                <div style="position: relative; z-index: 1;">
+                    <div class="help-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Fotógrafo Profesional - Estudio Visual Managua</h3>
+                    <p style="color: #155446; font-weight: 600; margin-top: -0.5rem; margin-bottom: 1rem;">
+                        <i class="fas fa-building" style="margin-right: 5px;"></i> Organizado por: Grupo Visual Creativo
+                    </p>
+                    <div style="margin-bottom: 1rem;">
+                        <p><strong><i class="fas fa-building"></i> Empresa:</strong> Estudio Visual Managua</p>
+                        <p><strong><i class="fas fa-map-marker-alt"></i> Ubicación:</strong> Managua, Nicaragua</p>
+                        <p><strong><i class="fas fa-money-bill-wave"></i> Salario:</strong> $450 - $700 USD</p>
+                        <p><strong><i class="fas fa-calendar-times"></i> Fecha Límite:</strong> 5 de Abril, 2025</p>
+                    </div>
+                    <p><strong>Requisitos:</strong></p>
+                    <ul style="margin-bottom: 1rem;">
+                        <li>Portfolio profesional diverso</li>
+                        <li>Experiencia en fotografía de eventos y retratos</li>
+                        <li>Dominio de Adobe Lightroom y Photoshop</li>
+                        <li>Equipo fotográfico profesional propio</li>
+                    </ul>
+                    <div style="margin-top: 1rem; padding: 10px; background: #f6e9ca; border-radius: 8px; border-left: 4px solid #155446;">
+                        <strong>Beneficios:</strong> Proyectos variados, clientes de alto perfil, comisiones por ventas adicionales.
+                    </div>
+                    <button class="btn-primary" style="margin-top: 1rem; width: 100%;">
+                        <i class="fas fa-paper-plane"></i> Aplicar Ahora
+                    </button>
+                </div>
+            </div>
+
+            <!-- Convocatoria 6 -->
+            <div class="help-card" style="position: relative; overflow: hidden;" data-categoria="musica" data-mes="abril" data-ciudad="managua" data-municipio="managua-centro">
+                <!-- Imagen de fondo -->
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3') center/cover; opacity: 0.15; z-index: 0;"></div>
+                
+                <div style="position: relative; z-index: 1;">
+                    <div class="help-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>Músico - Orquesta Sinfónica Nacional</h3>
+                    <p style="color: #155446; font-weight: 600; margin-top: -0.5rem; margin-bottom: 1rem;">
+                        <i class="fas fa-building" style="margin-right: 5px;"></i> Organizado por: Instituto Nicaragüense de Cultura
+                    </p>
+                    <div style="margin-bottom: 1rem;">
+                        <p><strong><i class="fas fa-building"></i> Empresa:</strong> Orquesta Sinfónica Nacional</p>
+                        <p><strong><i class="fas fa-map-marker-alt"></i> Ubicación:</strong> Managua, Nicaragua</p>
+                        <p><strong><i class="fas fa-money-bill-wave"></i> Salario:</strong> $350 - $550 USD</p>
+                        <p><strong><i class="fas fa-calendar-times"></i> Fecha Límite:</strong> 12 de Abril, 2025</p>
+                    </div>
+                    <p><strong>Requisitos:</strong></p>
+                    <ul style="margin-bottom: 1rem;">
+                        <li>Formación musical profesional</li>
+                        <li>Dominio de instrumento específico (violín, viola, cello)</li>
+                        <li>Experiencia en orquestas o ensambles</li>
+                        <li>Capacidad de lectura musical avanzada</li>
+                    </ul>
+                    <div style="margin-top: 1rem; padding: 10px; background: #f6e9ca; border-radius: 8px; border-left: 4px solid #155446;">
+                        <strong>Beneficios:</strong> Prestigio cultural, giras nacionales e internacionales, desarrollo artístico.
+                    </div>
+                    <button class="btn-primary" style="margin-top: 1rem; width: 100%;">
+                        <i class="fas fa-paper-plane"></i> Aplicar Ahora
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿Tu empresa busca talento nicaragüense?</h2>
+                <p>Publica tu convocatoria y encuentra a los mejores profesionales</p>
+                <div class="cta-buttons">
+                    <a href="mailto:empleos@talentopinolero.com" class="btn-primary">
+                        <i class="fas fa-plus"></i> Publicar Convocatoria
+                    </a>
+                    <a href="talentos.html" class="btn-secondary">
+                        <i class="fas fa-users"></i> Ver Talentos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Talento Pinolero. Orgullosamente nicaragüense 🇳🇮</p>
+            <div class="footer-links">
+                <a href="descripcion.html">Descripción</a>
+                <a href="ayuda.html">Ayuda</a>
+                <a href="mailto:talentopinolero@gmail.com">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="static/script.js"></script>
+    <script src="../convocatorias-filters.js"></script>
+</body>
+</html>
